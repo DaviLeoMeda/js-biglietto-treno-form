@@ -21,58 +21,51 @@
 
 <body>
 
+
     <div class="bg-purple">
 
-        <h1 class="text-center">Calcola il prezzo del tuo biglietto</h1>
+        <h1 class="text-center text-light">Calcola il prezzo del tuo biglietto</h1>
 
-        <section>
-            <div class="my-3">
-                <label for="kilometraggio" class="form-label">Metti il numero di km del biglietto</label>
-                <input type="number" class="form-control" id="kilometraggio" aria-describedby="emailHelp">
+        <section class="container bg-white py-3 rounded-4">
+            <div class="d-flex gap-5 align-items-center">
+                <div class="my-3 flex-grow-1">
+                    <label for="namesurname" class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="namesurname" aria-describedby="emailHelp">
+                </div>
+                <div class="my-3 flex-grow-1">
+                    <label for="kilometraggio" class="form-label">Km di percorrenza</label>
+                    <input type="number" class="form-control" id="kilometraggio" aria-describedby="emailHelp">
+                </div>
+
+                <div class="my-3 flex-grow-1">
+                    <label for="eta" class="form-label">Fascia di età</label>
+                    <select class="form-select" id="eta" aria-label="Default select example">
+                        <option selected>Seleziona un'opzione</option>
+                        <option value="standard">Standard</option>
+                        <option value="under18">Minorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center my-3 py-5">
+                <button type="submit" class="btn btn-secondary mx-2" onclick="erogazioneBiglietti()">Genera</button>
+                <button type="submit" class="btn btn-secondary mx-2" onclick="delete()">Annulla</button>
             </div>
 
         </section>
 
         <section>
 
+            <p id="nome"></p>
+
+            <p id="prezzo"></p>
+
         </section>
 
 
 
     </div>
-
-
-    <!-- <form> -->
-    <div class="my-3">
-        <label for="kilometraggio" class="form-label">Metti il numero di km del biglietto</label>
-        <input type="number" class="form-control" id="kilometraggio" aria-describedby="emailHelp">
-    </div>
-
-
-    <div class="my-3">
-        <label for="eta" class="form-label">Quanti anni hai?</label>
-        <input type="number" class="form-control" id="eta">
-    </div>
-
-    <button type="submit" class="btn btn-primary " onclick="erogazioneBiglietti()">Invia</button>
-
-    <!-- </form> -->
-
-    <p id="trainprice">
-
-    </p>
-
-
-
-    <!-- <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div> -->
-
-
-
-
-
 
 
     <script src="./assets/js/main.js"></script>
