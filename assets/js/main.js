@@ -24,30 +24,9 @@ function erogazioneBiglietti() {
 
 
 
-    // let standardprice = (kilometraggio * 0.21);
 
-    // if (eta < 18) {
-    //     let standardprice *= 0.8
+    document.querySelector(".biglietto").classList.toggle('d-none');
 
-
-    // if (eta > 17 && eta < 65) {
-
-    //     let normalprice = (kilometraggio * 0.21);
-    //     let roundedprice = normalprice.toFixed(2);
-    //     document.getElementById("trainprice").innerHTML = roundedprice;
-    // }
-    // else if (eta < 18) {
-    //     let normalprice = ((kilometraggio * 0.21) * 0.8);
-    //     let roundedprice = normalprice.toFixed(2);
-    //     document.getElementById("trainprice").innerHTML = roundedprice;
-    // }
-
-    // else if (eta > 65) {
-    //     let normalprice = ((kilometraggio * 0.21) * 0.6);
-    //     let roundedprice = normalprice.toFixed(2);
-    //     document.getElementById("trainprice").innerHTML = roundedprice;
-
-    // }
 
     document.getElementById("nome").innerHTML = `<p>Benvenuta/o ${nomination}</p>`;
     document.getElementById("eta").innerHTML = `<p>Biglietto ${eta}</p>`;
