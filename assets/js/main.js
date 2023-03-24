@@ -50,9 +50,14 @@ function erogazioneBiglietti() {
     // }
 
     document.getElementById("nome").innerHTML = `<p>Benvenuta/o ${nomination}</p>`;
-    document.getElementById("prezzo").innerHTML = `<p>Il prezzo del biglietto è di ${price.toFixed(2)} €</p>`;
+    document.getElementById("eta").innerHTML = `<p>Biglietto ${eta}</p>`;
+    document.getElementById("wagon").innerHTML = `<p> ${randomNumberWagon(1, 10)}</p>`
+    document.getElementById("codeCp").innerHTML = `<p> ${randomNumberWagon(1, 10000)}</p>`
+    document.getElementById("prezzo").innerHTML = `<p>Il prezzo è ${price.toFixed(2)} €</p>`;
 
     console.log(nomination, kilometraggio, eta, price.toFixed(2));
 }
 
-
+function randomNumberWagon(min, max) {
+    return Math.floor(Math.random() * max) + min;
+}
