@@ -3,18 +3,20 @@
 function erogazioneBiglietti() {
 
     let nomination = document.getElementById("namesurname").value;
-    let kilometraggio = document.getElementById("kilometraggio").value;
+    let kilometraggio = parseFloat(document.getElementById("kilometraggio").value);
     let eta = document.getElementById("eta").value;
-
-    console.log(nomination, kilometraggio, eta);
 
     let price = (kilometraggio * 0.21);
 
-    if (eta < 18) {
+    console.log(nomination, kilometraggio, eta, price);
+
+
+
+    if (eta == `under18`) {
         price *= 0.8;
     }
 
-    else if (eta > 65) {
+    else if (eta == `over65`) {
         price *= 0.6;
 
 
@@ -46,10 +48,10 @@ function erogazioneBiglietti() {
     //     document.getElementById("trainprice").innerHTML = roundedprice;
 
     // }
+    document.getElementById("nome").innerHTML = `<p>Benvenuta/o ${nomination}</p>`;
+    document.getElementById("price").innerHTML = `<p>Il prezzo del biglietto è di ${price.toFixed(2)} €</p>`;
 
+    console.log(nomination, kilometraggio, eta, price.toFixed(2));
 }
 
-console.log(nomination, price);
 
-document.getElementById("nome").innerHTML = `<p>Benvenuta/o ${nomination}</p>`;
-document.getElementById("price").innerHTML = `<p>Il prezzo del biglietto è di ${price.toFixed(2)} €</p>`;
