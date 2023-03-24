@@ -48,8 +48,9 @@ function erogazioneBiglietti() {
     //     document.getElementById("trainprice").innerHTML = roundedprice;
 
     // }
+
     document.getElementById("nome").innerHTML = `<p>Benvenuta/o ${nomination}</p>`;
-    document.getElementById("price").innerHTML = `<p>Il prezzo del biglietto è di ${price.toFixed(2)} €</p>`;
+    document.getElementById("prezzo").innerHTML = `<p>Il prezzo del biglietto è di ${price.toFixed(2)} €</p>`;
 
     console.log(nomination, kilometraggio, eta, price.toFixed(2));
 }
